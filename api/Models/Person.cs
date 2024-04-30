@@ -14,7 +14,7 @@ namespace Api.Models
         [BsonRequired]
         public string Name { get; set; }
 
-        public DateTime? BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         [EmailAddress(ErrorMessage = "Invalid email format")]
         public string? Email { get; set; }
@@ -32,23 +32,38 @@ namespace Api.Models
 
         public string? ZipCode { get; set; }
 
-        public int? Age
+        public int Age
         {
             get
             {
-                if (BirthDate.HasValue)
+                var today = DateTime.Today;
+                var age = today.Year - BirthDate.Year;
+                if (BirthDate.Date > today.AddYears(-age))
                 {
-                    var today = DateTime.Today;
-                    var age = today.Year - BirthDate.Value.Year;
-                    if (BirthDate.Value.Date > today.AddYears(-age))
-                    {
-                        age--;
-                    }
-                    return age;
+                    age--;
                 }
-                return null;
+                return age;
 
             }
+        }
+
+        public bool IsAdult()
+        {
+            return Age >= 18;
+        }
+
+        public bool IsValid(out string errorMessage)
+        {
+            errorMessage = string.Empty;
+
+            if (!IsAdult())
+            {
+                errorMessage = "The person must be at least 18 years old.";
+                return false;
+            }
+
+
+            return true;
         }
 
         public Person()
@@ -58,6 +73,7 @@ namespace Api.Models
         public Person(PersonCreateDTO personCreateDTO)
         {
             Name = personCreateDTO.Name;
+            BirthDate = personCreateDTO.BirthDate;
             Email = personCreateDTO.Email;
             PhoneNumber = personCreateDTO.PhoneNumber;
             Address = personCreateDTO.Address;

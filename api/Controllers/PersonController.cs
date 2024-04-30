@@ -31,6 +31,11 @@ namespace Api.Controllers
         {
             var person = new Person(personDTO);
 
+            if (person.IsValid(out string errorMessage))
+            {
+                return BadRequest(errorMessage);
+            }
+
             await _personCollection.InsertOneAsync(person);
             return CreatedAtAction(nameof(GetById), new { id = person.Id }, person);
         }
@@ -48,8 +53,14 @@ namespace Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string id, Person updatedPerson)
+        public async Task<IActionResult> Update(string id, PersonCreateDTO personDTO)
         {
+            var updatedPerson = new Person(personDTO);
+            if (updatedPerson.IsValid(out string errorMessage))
+            {
+                return BadRequest(errorMessage);
+            }
+
             var person = await _personCollection.FindOneAndReplaceAsync(p => p.Id == id, updatedPerson);
             if (person == null)
             {

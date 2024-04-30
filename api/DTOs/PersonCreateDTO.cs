@@ -6,6 +6,8 @@ namespace Api.DTOs
     {
         public string Name { get; set; }
 
+        public DateTime BirthDate { get; set; }
+
         public string? Email { get; set; }
 
         public string? PhoneNumber { get; set; }
@@ -27,6 +29,7 @@ namespace Api.DTOs
         public PersonCreateDTO(Person person)
         {
             Name = person.Name;
+            BirthDate = person.BirthDate;
             Email = person.Email;
             PhoneNumber = person.PhoneNumber;
             Address = person.Address;
