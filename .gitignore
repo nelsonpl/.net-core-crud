@@ -134,4 +134,4 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-api/appsettings.json
+/api/appsettings.json
