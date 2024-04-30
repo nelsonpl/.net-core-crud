@@ -1,0 +1,135 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+*.vscode/
+*.vscode-test/
+.vs/
+.vscode/
+*_i.c
+*_p.c
+*.pidb
+*.log
+*.iobj
+*.dbmdl
+*.pch
+*.ipch
+*.svclog
+*.hdf
+*.bak
+*.cache
+*.ilk
+*.cl
+*.ncb
+*.pdb
+*.obj
+*.exe
+*.res
+*.dll
+*.idb
+*.deploy
+*.aps
+*.xpt
+*.xap
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.sbr
+*.scc
+*.lib
+*.dbg
+*.pdb
+*.vc.db
+*.ilk
+*.exp
+*.meta
+*.tlog/
+*.tlog/
+*.log/
+*.diff/
+*.opendb
+*.VC.opendb
+*_i.c
+*_p.c
+*.sdf
+*.dbmdl
+*.dbproj.schemaview
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
