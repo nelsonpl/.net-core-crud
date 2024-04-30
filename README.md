@@ -33,7 +33,7 @@ This is a .NET Core API for managing person's certificates. With this API, you c
 ## Project Setup
 
 1. **Clone the Repository**:
-git clone https://github.com/your-user/your-project.git
+git clone github.com/nelsonpl/.net-core-crud.git
 
 2. **Install Dependencies**:
 cd your-project
